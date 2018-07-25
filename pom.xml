@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.anair.database</groupId>
+	<artifactId>liquido</artifactId>
+	<version>0.0.3</version>
+
+	<name>liquibase example</name>
+	<description>Database refactoring using liquibase - Example based on Oracle 11g</description>
+
+	<developers>
+		<developer>
+			<name>siva kumar</name>
+			<email>siva.katam@blazeclan.com</email>
+		</developer>
+	</developers>
+	
+	<properties>
+		<liquibase.plugin.version>3.5.3</liquibase.plugin.version>
+		<oracle.client.version>##replace version##</oracle.client.version>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>${liquibase.plugin.version}</version>
+				<configuration>
+					<changeLogFile>src/main/resources/master-changelog.xml</changeLogFile>
+					<driver>com.mysql.jdbc.Driver</driver>
+					<url>${DB_URL}</url>
+					<username>${DB_USERNAME}</username>
+					<password>${DB_PASSWORD}</password>
+					<defaultSchemaName>${DB_SCHEMA}</defaultSchemaName>
+					<contexts>${DB_CONTEXT}</contexts>
+					<logLevel>${LOG_LEVEL}</logLevel>
+					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+					<tag>${tag_id}</tag>
+					<migrationSqlOutputFile>target/liquibase/migration.sql</migrationSqlOutputFile>
+					<outputFile>target/liquibase/rollback.sql</outputFile>
+					<rollbackCount>${Rollback_no}</rollbackCount>
+					<rollbackTag>${ROLLBACK_TAG}</rollbackTag>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.37</version>
+		</dependency>
+	</dependencies>
+</project>
