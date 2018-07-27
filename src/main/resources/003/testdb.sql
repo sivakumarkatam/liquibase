@@ -12,7 +12,7 @@ CREATE TABLE `APGADMIN_CCExpirySchedular_Settings` (
   `SuccessEmailSubject` text NOT NULL,
   `ExpiryType` varchar(10) NOT NULL,
   PRIMARY KEY (`SettingId`)
-);/* ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;*/
+);
 
 CREATE TABLE `APGADMIN_CSCEmailTemplate_Settings` (
   `CSCEmailTemplateSettingsId` bigint(20) NOT NULL AUTO_INCREMENT,

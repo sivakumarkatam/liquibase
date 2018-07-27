@@ -30,6 +30,13 @@
 
 <include file="apg.sql" relativeToChangelogFile="true" />
 <include file="insertapg.sql" relativeToChangelogFile="true" />
-<include file="testdb.sql" relativeToChangelogFile="true" />
-<include file="single.sql" relativeToChangelogFile="true" />
+<!-- <include file="testdb.sql" relativeToChangelogFile="true" /> -->
+<!-- <include file="single.sql" relativeToChangelogFile="true" /> -->
+<include file="one.sql" relativeToChangelogFile="true" />
+<include file="two.sql" relativeToChangelogFile="true" />
+<include file="oneinsert.sql" relativeToChangelogFile="true" />
+<!-- <include file="three.sql" relativeToChangelogFile="true" /> -->
+<include file="drop.sql" relativeToChangelogFile="true" />
+<!-- <include file="5.sql" relativeToChangelogFile="true" /> -->
+<include file="6.sql" relativeToChangelogFile="true" />
 </databaseChangeLog>
