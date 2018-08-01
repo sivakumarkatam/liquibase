@@ -1,6 +1,4 @@
-DROP TABLE IF EXISTS `APG_Currency`;
-
-CREATE TABLE `APG_Currency` (
+CREATE TABLE `APG_Money` (
   `CurrencyId` int(11) NOT NULL AUTO_INCREMENT,
   `Currency` varchar(100) NOT NULL,
   `Location` varchar(1000) NOT NULL,

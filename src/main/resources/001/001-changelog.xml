@@ -5,8 +5,8 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
     
     <include file="config_values_insert.sql" relativeToChangelogFile="true" />
-<!--    <include file="movie_alter.sql" relativeToChangelogFile="true" /> -->
-    <!--<includeAll path="src/main/resources/latest/package/"/>
+<!--    <include file="movie_alter.sql" relativeToChangelogFile="true" /> 
+    <includeAll path="src/main/resources/latest/package/"/>
     <includeAll path="src/main/resources/latest/package-body/"/> -->
  <include file="deletenewrow.sql" relativeToChangelogFile="true" /> 
 <include file="newline.sql" relativeToChangelogFile="true" />

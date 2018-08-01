@@ -2,10 +2,9 @@
 
 --changeset anair:alter_movie_table
 --alter table movie drop CONSTRAINT actor_fk; 
-alter table movie drop column actor_id;
+--alter table movie drop column actor_id;
 ------------------------------
 
---changeset anair:create_movie_actor_rlship_table
 create table movie_actor (
     id number not null,
     movie_id number not null,
