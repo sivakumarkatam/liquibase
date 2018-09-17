@@ -35,6 +35,8 @@
 			        <groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>3.0.2</version>
+				<executions>
+					<execution>
 				<configuration>
 					<changeLogFile>src/main/resources/master-changelog.xml</changeLogFile>
 					<driver>com.mysql.jdbc.Driver</driver>
@@ -51,15 +53,15 @@
 					<rollbackCount>${Rollback_no}</rollbackCount>
 					<rollbackTag>${liquibase.rollbackTag}</rollbackTag>
 				</configuration>
-<executions>
-					<execution>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>update</goal>
-						</goals>
-					</execution>
-</executions>		
-	</plugin>
+				 <goals>
+                                                        <goal>dropAll</goal>
+                                                        <goal>update</goal>
+                                                        <goal>tag</goal>
+                                                        <goal>rollback</goal>
+                                                </goals>
+   </execution>
+            </executions>
+			</plugin>
 		</plugins>
 
 	</build>

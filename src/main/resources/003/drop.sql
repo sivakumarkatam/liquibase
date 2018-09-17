@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS `APG_Currency`;

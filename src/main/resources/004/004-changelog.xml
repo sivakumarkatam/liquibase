@@ -8,12 +8,21 @@
    |  Release Version 1
    +-->
 
-<include file="withcomments.sql" relativeToChangelogFile="true" />
 <include file="withinsert.sql" relativeToChangelogFile="true" />
-<include file="multi.sql" relativeToChangelogFile="true" />
+<include file="withcomments.sql" relativeToChangelogFile="true" />
+<!--include file="new.sql" relativeToChangelogFile="true" /-->
+<!-- <include file="new1.sql" relativeToChangelogFile="true" /> -->
+<!--<include file="multi.sql" relativeToChangelogFile="true" /> -->
 <!--<changeSet id="multiRollbackTest" author="sivaa">
 <rollback>
 drop table APG_Configuration_Service;
 </rollback>
 </changeSet> -->
+<changeSet id="default-values-for-admin" author="ingimar">
+        <sqlFile path="src/main/resources/004/new1.sql"/>
+    </changeSet>
+<changeSet id="apg-payflow" author="siva">
+        <sqlFile path="src/main/resources/004/apg.sql"/>
+    </changeSet>
+
 </databaseChangeLog>
